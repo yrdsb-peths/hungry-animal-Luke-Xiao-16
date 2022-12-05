@@ -15,6 +15,16 @@ public class Apple extends Actor
     public void act()
     {
         // Add your action code here.
-        setLocation(getX(), getY()+1);
+        int x = getX();
+        int y = getY()+1;
+        setLocation(x,y);
+        
+        // Remove apple and display "Game Over" if an apple touches the ground
+        MyWorld world = (MyWorld) getWorld();
+        if (getY() >= world.getHeight())
+        {
+            world.gameOver();
+            world.removeObject(this);
+        }
     }
 }

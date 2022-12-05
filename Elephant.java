@@ -18,26 +18,37 @@ public class Elephant extends Actor
         if (Greenfoot.isKeyDown("Left"))
         {
             //move(-1);
-            setLocation(getX()-1,getY());
+            setLocation(getX()-2,getY());
         }
         
         else if (Greenfoot.isKeyDown("Right"))
         {
             //move(1);
-            setLocation(getX()+1,getY());
+            setLocation(getX()+2,getY());
         }
         
         else if (Greenfoot.isKeyDown("Up"))
         {
-            setLocation(getX(),getY()-1);
+            setLocation(getX(),getY()-2);
         }
         
         else if (Greenfoot.isKeyDown("Down"))
         {
-            setLocation(getX(),getY()+1);
+            setLocation(getX(),getY()+2);
         }
         
         //Remove apple if elephant touches (eats) it
-        removeTouching(Apple.class);
+        eat();
+    }
+    
+    public void eat() // The elephant eats the apple then the game spawns a new one
+    {
+        if (isTouching(Apple.class))
+        {
+            removeTouching(Apple.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createApple();
+            world.score();
+        }
     }
 }
