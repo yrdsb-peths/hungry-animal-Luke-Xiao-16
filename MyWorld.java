@@ -22,7 +22,7 @@ public class MyWorld extends World
         
         // Create the elephant
         Elephant elephant = new Elephant();
-        addObject(elephant,300,300);
+        addObject(elephant,300,350);
         
         // Create a label
         scoreLabel = new Label(0,100); // (String value, int FontSize)

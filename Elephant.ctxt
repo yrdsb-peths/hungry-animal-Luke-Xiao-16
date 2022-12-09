@@ -2,8 +2,12 @@
 comment0.target=Elephant
 comment0.text=\n\ Write\ a\ description\ of\ class\ Elephant\ here.\n\ The\ main\ character\ of\ the\ game\n\ @author\ (Luke\ Xiao)\ \n\ @version\ (11.29.2022)\n
 comment1.params=
-comment1.target=void\ act()
+comment1.target=Elephant()
 comment1.text=\n\ Act\ -\ do\ whatever\ the\ Elephant\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=
-comment2.target=void\ eat()
-numComments=3
+comment2.target=void\ ElephantAnimation()
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ eat()
+numComments=5
