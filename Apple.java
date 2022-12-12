@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Apple extends Actor
 {
     GreenfootSound Explosion = new GreenfootSound("Explosion.mp3");
+    int speed = 1;
     /**
      * Act - do whatever the Apple wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -17,7 +18,7 @@ public class Apple extends Actor
     {
         // Add your action code here.
         int x = getX();
-        int y = getY()+1;
+        int y = getY()+speed;
         setLocation(x,y);
         
         // Remove apple and display "Game Over" if an apple touches the ground
@@ -28,5 +29,10 @@ public class Apple extends Actor
             world.removeObject(this);
             Explosion.play();
         }
+    }
+    
+    public void setSpeed(int Speed)
+    {
+        speed = Speed;
     }
 }
