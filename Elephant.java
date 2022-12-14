@@ -64,7 +64,7 @@ public class Elephant extends Actor
         }
     }
     
-    public void act()
+    public void act() //elephant move
     {
         // Add your action code here.
         if (Greenfoot.isKeyDown("left"))
